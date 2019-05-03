@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import SimpleChart from './components/SimpleChart';
+import Table from './components/Table';
+import html2canvas from 'html2canvas';
 import './App.css';
 
 function App() {
+const print = () => {
+  html2canvas(document.querySelector('.App')).then((canvas) => {    
+    const pdf = new window.jsPDF('p', 'mm', 'a6');
+    var width = pdf.internal.pageSize.getWidth();
+    var height = pdf.internal.pageSize.getHeight();
+    pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, width, height);
+    pdf.save("download.pdf");  
+  });
+}
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className= 'Main'>
+      <div className="App">
+         <SimpleChart/>
+         <Table/>     
+      </div>
+      <button onClick={print} className="button">Print</button>    
     </div>
   );
 }

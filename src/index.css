@@ -12,3 +12,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.button {
+  background-color: #008CBA;
+  width: 50px;
+  margin:10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+.table {display:table;
+  border-collapse:collapse;
+  border:1px solid grey;
+  border-spacing: 10px; 
+  width : 95%;
+  margin:10px;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+ }
+.row { display:table-row;
+  border: 1px solid #ddd;}
+  
+.headrow {
+    display:table-row;
+    border: 1px solid #ddd;
+    background-color: #a5a3a7;}
+.cell {display:table-cell;
+  width: 200px;         }
+
