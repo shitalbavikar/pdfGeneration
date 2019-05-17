@@ -1,0 +1,10 @@
+
+table.report-container {
+    page-break-after:always;
+}
+thead.report-header {
+    display:table-header-group;
+}
+tfoot.report-footer {
+    display:table-footer-group;
+} 

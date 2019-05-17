@@ -1,0 +1,148 @@
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	animation: App-logo-spin infinite 20s linear;
+	height: 40vmin;
+	pointer-events: none;
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.MainHeader {
+	border: 0.5px solid gray;
+	width: 100%;
+	height: 80px;
+	background-color: RGB(231, 231, 231);
+	font-weight: bold;
+	vertical-align: center;
+	margin: 0px;
+}
+
+.Heading {
+	text-align: top;
+	top: 0px;
+	height: 100%;
+}
+
+.nav-wrapper {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+	width: 100%;
+  background-color: #394263;
+  margin: 0px;
+}
+
+.nav-header {
+  width: 222px;
+  margin: 0px;
+	margin-left: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	line-height: 30px;
+	border-radius: 3px;
+	cursor: default;
+	position: relative;
+	background-color: #394263;
+	color: white;
+}
+
+.nav-header span {
+  /* margin-right: 20px; */
+  margin: 0px;
+}
+
+.Dashboard_ul {
+	z-index: 20;
+	position: absolute;	
+	border-top: none;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;	
+	margin: 0px;
+  -webkit-overflow-scrolling: touch;
+  padding: 0px;
+  padding-top:1px;
+}
+
+.Dashboard_li {
+	width: 100%;
+	line-height: 1.6rem;
+	cursor: default;
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+  margin-left: 20px;
+  transition: all .4s ease-in-out;
+  background-color: #394263;
+  color: #FFF;
+  border: 1px solid white;
+}
+.Dashboard_li :hover {
+  background-color: rgba(255, 255, 255, .1);
+  cursor: pointer;
+  width: 100%;
+}
+.Dashboard_li_links{
+  color: white;
+  width: 100%;
+  text-decoration: none;
+}
+.label {
+	width: fit-content;
+	height: 25px;
+	text-align: right;
+}
+
+.FilterUl {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.FilterItem {
+	list-style: none;
+	display: inline-flex;
+}
+
+.autosuggestText {
+	border: 1px solid lightgray;
+	width: 150px;
+	outline: none;
+	border-radius: 0;
+	-webkit-appearance: button;
+	overflow: hidden;
+	height: 25px;
+}

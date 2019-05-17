@@ -1,0 +1,155 @@
+.autosuggest {
+    .vertical-centre (@height) {
+        height: @height;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .border-box {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .transform (@value1,@value2: X,...) {
+        @value: ~ `"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+        transform: @value;
+        -ms-transform: @value;
+        -webkit-transform: @value;
+        -o-transform: @value;
+        -moz-transform: @value;
+    }
+
+    
+.autosuggestText{
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: button;
+    overflow: hidden;
+    height: 25px;
+
+}
+
+
+    @height: 26px;
+    @spacing: 0px;
+    @select-colour: @component_searchbox_button_hover;
+    @font-size: 12px;
+    @border-colour: @border_color_white;
+
+    div.autosuggest-container {
+        width: 222px;
+        height: 26px;
+        padding-left: 0px;
+        float: right;
+
+        &.showOptions > div.autosuggest-list {
+            .transform(scale(1, 1));
+            height: 26px;
+            width: 217px;
+            @icon-width: 14px;
+        }
+
+
+        > div.autosuggest-display {
+            width: 222px;
+            background: white;
+            height: @height;
+            /*left: -4px;*/
+            position: relative;
+            display: flex;
+
+            &.clicked {
+                outline: solid 1px @component_color_darkcyan;
+                background: white;
+                box-sizing: border-box;
+            }
+
+            > span.spanautosuggest {
+                font-size: @font-size;
+                width: 100%;
+                position: relative;
+                .border-box;
+                background: url("@{image_relative_path_1}/Menu/search.png") 96%;
+                background-repeat: no-repeat;
+                padding: 0px 5px 0px 5px;
+                height: 30px;
+                line-height: 24px;
+                background-size: 25px 25px;    
+
+            }
+        }
+
+         
+
+        > div.autosuggest-display:hover {
+            background: @component_searchbox_button_hover;
+        }
+
+        > div.autosuggest-list {
+            width: 217px;
+            position: relative;
+            .transform(scale(1, 0));
+            -webkit-margin-before: 1px;
+            margin: 0px;
+            z-index: 5;
+
+            > div.container {
+                font-size: @font-size;
+                border: solid 1px @border-colour;
+                border-top: none;
+                padding: 0px;
+                margin: 0px;
+                margin-top: 1px;
+                width: 222px;
+                box-sizing: border-box;
+                position: relative;
+                /*left: -4px;*/
+                max-height: 155px;
+                overflow: auto;
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+
+                > div.options {
+                    font-size: 12px;
+                    list-style-type: none;
+                    background-color: white;
+                    width: 100%;
+                    padding-left: 5px;
+                    line-height: 25px;
+                    vertical-align: middle;
+                    height: 25px;
+
+                }
+
+                > div.selectedOption {
+                    background: @component_color_darkcyan !important;
+                    color: white;
+                    width: 100%;
+                    padding-left: 5px;
+                    line-height: 25px;
+                    vertical-align: middle;
+                    height: 25px;
+
+                  
+                }
+
+                div:hover {
+                    background: @component_searchbox_button_hover;
+                }
+            }
+        }
+    }
+}
+
+span.labelname.combinedStyle ~ span.inputbox:last-child .autosuggest {
+    /* width: 108px; */
+    .autosuggest-container {
+        width: 100%;
+
+        .autosuggest-display {
+            width: 100%;
+        }
+    }
+}
